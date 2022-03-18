@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
-}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Philosopher:400,400i,700,700i&display=swap);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.b-teaser-reversable {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.b-teaser-reversable .date {
+    margin: 0.8rem 0 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.b-teaser-reversable .img {
+    height: 346px;
+    width: 470px;
+    border-radius: 1.25rem;
+    background-color: #d8d8d8;
+    -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
 }
-
-.App-link {
-  color: #61dafb;
+.b-teaser-reversable .img div {
+    height: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.b-teaser-reversable .img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+.b-teaser-reversable .img .img-sub-header img {
+    -o-object-position: 91% center;
+    object-position: 91% center;
+    font-family: "object-fit: cover; object-position: 91% center;";
+}
+.b-teaser-reversable .content {
+    width: 100%;
+}
+.b-teaser-reversable .title {
+    font-family: Philosopher;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #41633b;
+}
+.b-teaser-reversable .description {
+    color: #606060;
+    font-family: Montserrat;
+    font-size: 18px;
+    line-height: 32px;
+}
+.b-teaser-reversable .description p {
+    font-size: 18px;
+    text-align: justify;
+}
+.b-teaser-reversable .read-more {
+    font-family: Philosopher;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: 2.1875rem;
+}
+.b-teaser-reversable .read-more ul {
+    margin-top: 1rem;
+    padding-left: 0;
+}
+.b-teaser-reversable:nth-child(odd) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.b-teaser-reversable:nth-child(odd) .img {
+    margin-right: 1.875rem;
+}
+.b-teaser-reversable:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+.b-teaser-reversable:nth-child(even) .img {
+    margin-left: 1.875rem;
+}
+@media (max-width: 991.98px) {
+    .b-teaser-reversable {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-bottom: 1.875rem;
+    }
+    .b-teaser-reversable .img-container {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    }
+    .b-teaser-reversable .title {
+        font-size: 1.5625rem;
+    }
+    .b-teaser-reversable .description,
+    .b-teaser-reversable .description p {
+        font-size: 0.75rem;
+    }
+    .b-teaser-reversable .img {
+        width: 100%;
+        margin-bottom: 1.25rem;
+        margin-right: 0;
+    }
+    .b-teaser-reversable:nth-child(odd) .img {
+        margin-right: 0;
+    }
+    .b-teaser-reversable:nth-child(even) .img {
+        margin-left: 0;
+    }
 }
